@@ -74,3 +74,9 @@ main {
     box-sizing: 0px 4px 16px rgba(2, 6, 23, 0.251);
 
 }
+
+@media (width <= 60em) {
+    .container {
+        padding-inline: 1.5rem;
+    }
+}

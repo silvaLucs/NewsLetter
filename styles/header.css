@@ -1,17 +1,17 @@
 #primary {
     padding-block: 20px;
 
-    div {
+    & div {
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
-    div:nth-child(2) {
+    & div:nth-child(2) {
         margin-inline: auto; 
     }
 
-    div:nth-child(3){
+    & div:nth-child(3){
         justify-self: end;
     }
 }
@@ -21,4 +21,23 @@
     border: solid 1px var(--stroke-color);
     border-inline: none;
     justify-content: space-between;
+}
+
+@media (width <= 60em) {
+
+    #primary {
+       & strong {
+        display: none;
+       }
+
+    }
+
+    #secondary {
+        overflow-x: scroll;
+        gap: 2rem;
+        
+        & a {
+            white-space: nowrap;
+        }
+    }
 }
