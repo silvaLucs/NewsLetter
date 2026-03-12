@@ -78,5 +78,6 @@ main {
 @media (width <= 60em) {
     .container {
         padding-inline: 1.5rem;
+        margin-top: 1rem;
     }
 }

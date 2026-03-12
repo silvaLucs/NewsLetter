@@ -120,22 +120,31 @@ aside {
     main {
         .grid-flow-col {
         grid-auto-flow: row;
-        grid-template-rows: 12.5rem 12.5rem 1fr;
-    }
+        }
 
-       & section div {
-        grid-row: 3/4;
+        & #featured {
+            display: grid;
+            grid-template-rows: 12.5rem 12.5rem 1fr ;
+
+        &  > div {
+          grid-row: 3/4;
        }
     
         & section, div.grid-cols-2 {
             grid-template-columns: 1fr;
         }
-        }
-
-        figure:first-child {
+        
+        & > figure:first-child {
             grid-row: 1/3;
             
         }
+        }
+
+        
+    }
+
+
+       
 
 
 
