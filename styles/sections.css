@@ -64,11 +64,11 @@ section header {
         grid-template-columns: repeat(4, 292px);
     }
 
-    img {
+    & img {
         height: 160px;
     }
 
-    figure {
+    & figure {
         position: relative;
 
         .content-tag {
@@ -77,7 +77,7 @@ section header {
             left: 8px;
         }
 
-        p {
+        & p {
             margin-top: 8px;
             font-weight: 800;
         }
@@ -118,6 +118,8 @@ aside {
 
 @media(width <= 60em) {
     main {
+        row-gap: 1rem;
+
         .grid-flow-col {
         grid-auto-flow: row;
         }
@@ -125,6 +127,7 @@ aside {
         & #featured {
             display: grid;
             grid-template-rows: 12.5rem 12.5rem 1fr ;
+            margin-bottom: 1rem;
 
         &  > div {
           grid-row: 3/4;
@@ -140,6 +143,38 @@ aside {
         }
         }
 
+        & #weekly {
+
+            & header {
+                display: flex;
+                justify-content: space-between;
+
+                & a {
+                    display: flex;
+                    gap: 2px;
+                }
+
+            }
+
+            & > div {
+
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+
+         & figure {
+            position: relative;
+             & img {
+                width: 100%;
+             }
+         }
+
+            & span {
+                position: absolute;
+                left: .5rem;
+                top: .5rem;
+            }
+        }
+        }
         
     }
 
