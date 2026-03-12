@@ -3,13 +3,13 @@ section header {
     padding-block: 12px 24px;
     font: var(--text-span);
 
-    a {
+    & a {
 
         justify-self: end;
         align-content: center;
         gap: 8px;
 
-        span {
+        & span {
             background-image: url(../assets/Images/icons/ArrowRight.svg);
             width: 16px;
             height: 16px;
@@ -23,7 +23,7 @@ section header {
 
 #featured {
     grid-area: featured;
-    img {
+    & img {
     height: 100%;
     object-fit: cover;
 }
@@ -41,7 +41,7 @@ section header {
             background: linear-gradient(180deg, rgba(2, 6, 23, 0) 0%, #020617 100%);
     }
 
-                figcaption {
+                & figcaption {
                     position: absolute;
                     bottom: 0;
                     padding: 24px;
@@ -49,7 +49,7 @@ section header {
                     &::has(.text-lg) {
                             padding: 12px;
                         }
-                    h2 {
+                    & h2 {
                         margin-top: 8px;
                     }
 }
@@ -86,13 +86,13 @@ section header {
 #ai {
     grid-area: ai;
 
-    img {
+    & img {
         width: 176px;
         aspect-ratio: 1/1;
         object-fit: cover;
     }
 
-    h3 {
+    & h3 {
         margin-block: 8px 4px;
     }
 }
@@ -105,13 +105,39 @@ aside {
     margin-top: 32px;
 
 
-    h3 {
+    & h3 {
         margin-top: 8px;
     }
 
-    img {
+    & img {
         width: 72px;
         aspect-ratio: 1/1;
         object-fit: cover;
     }
 }
+
+@media(width <= 60em) {
+    main {
+        .grid-flow-col {
+        grid-auto-flow: row;
+        grid-template-rows: 12.5rem 12.5rem 1fr;
+    }
+
+       & section div {
+        grid-row: 3/4;
+       }
+    
+        & section, div.grid-cols-2 {
+            grid-template-columns: 1fr;
+        }
+        }
+
+        figure:first-child {
+            grid-row: 1/3;
+            
+        }
+
+
+
+
+    }
